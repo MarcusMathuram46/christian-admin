@@ -1,0 +1,209 @@
+/* Basic styling for slider-list container */
+.container {
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  /* Slider List Main Container */
+  .slider-list {
+    width: 90%;
+    max-width: 1200px;
+    margin: 90px;
+    padding: 40px;
+    color: #003366; /* Consistent color theme */
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    border-radius: 0;
+    box-shadow:1px 1px 10px 1px lightblue;
+  }
+  
+  /* Heading styling */
+  .slider-list h2 {
+    text-align: center;
+    color: #001f5b;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  
+  /* Button group styling */
+  .btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .btn-group .btn {
+    min-width: 120px;
+  }
+  
+  /* Table container styling */
+  .table-container {
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow-x: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table styling */
+  .table {
+    width: 100%;
+    margin-top: 15px;
+    font-size: 1rem;
+    border-collapse: collapse;
+  }
+  
+  .table th {
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .table td,
+  .table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Image styling for advertisements */
+  .ad-image {
+    width: 80px;
+    height: auto;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+  
+  /* Modal styling */
+  .modal {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  /* Responsive design for tablets and larger screens */
+  @media (max-width: 1024px) {
+    .slider-list {
+      padding: 20px;
+    }
+  
+    .slider-list h2 {
+      font-size: 1.5rem;
+    }
+  
+    .search-bar {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .btn-group {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .btn {
+      width: 100%;
+      margin: 5px 0;
+    }
+  
+    .table th,
+    .table td {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  
+    .ad-image {
+      width: 60px; /* Resize for smaller screens */
+    }
+  }
+  
+  /* Responsive design for mobile phones */
+  @media (max-width: 768px) {
+    .slider-list {
+      padding: 20px;
+      margin: 50px;
+      width:100%;
+      overflow-x: auto
+    }
+  
+    .slider-list h2 {
+      font-size: 1.25rem;
+    }
+  
+    .table th,
+    .table td {
+      font-size: 0.85rem;
+      padding: 8px;
+    }
+  
+    .table-container {
+      overflow-x: auto;
+    }
+  
+    .btn-group {
+      flex-direction: row;
+      width: 100%;
+    }
+  
+    .btn {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .search-bar {
+      margin-bottom: 15px;
+      width: 100%;
+    }
+  
+    .ad-image {
+      width: 50px; /* Resize for smaller screens */
+    }
+  
+    .modal {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+  
+  /* Responsive design for extra-small screens (phones in portrait mode) */
+  @media (max-width: 480px) {
+    .slider-list h2 {
+      font-size: 1.2rem;
+    }
+  
+    .table th,
+    .table td {
+      font-size: 0.8rem;
+      padding: 6px;
+    }
+  
+    .ad-image {
+      width: 40px; /* Resize even more for very small screens */
+    }
+  
+    .modal {
+      padding: 10px;
+      width: 95%;
+    }
+  }
