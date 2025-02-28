@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form'
 import { Link } from 'react-router-dom'
 import '../styles/Login.css'
 
-function Login() {
+function Login({ setAuthToken }) {
   const [loginData, setLoginData] = useState({
     email: '',
     password: '',
@@ -29,9 +29,10 @@ function Login() {
       const info = response.data
 
       if (info.token) {
-        localStorage.setItem('authToken', info.token) // Store token in localStorage
+        localStorage.setItem('authToken', info.token)
+        setAuthToken(info.token) // Update state in App.js
         setMsg('Login successful!')
-        navigate('/advertisement') // Redirect to advertisement page after login
+        navigate('/advertisement')
       } else {
         setMsg(info.message)
       }

@@ -240,9 +240,11 @@ function Advertisements() {
           <thead>
             <tr>
               <th>Select</th>
+              <th>Sno</th>
               <th>Title</th>
               <th>Description</th>
               <th>Image</th>
+              <th>Type</th>
               <th>Actions</th>
             </tr>
           </thead>
@@ -261,6 +263,7 @@ function Advertisements() {
                 <td>
                   <img src={ad.image} alt={ad.title} width="50" height="50" />
                 </td>
+                <td>{ad.type}</td>
                 <td>
                   <Button
                     className="btn btn-warning btn-sm me-2"
@@ -308,6 +311,19 @@ function Advertisements() {
             <Form.Group>
               <Form.Label>Image</Form.Label>
               <Form.Control type="file" onChange={handleFileChange} />
+            </Form.Group>
+            <Form.Group controlId="formAdsType">
+              <Form.Label>Type</Form.Label>
+              <Form.Select
+                name="type"
+                value={newAd.type}
+                onChange={handleInputChange}
+              >
+                <option value="">Select Type</option>
+                <option value="important">Important</option>
+                <option value="most-read">Most Read</option>
+                <option value="general">General</option>
+              </Form.Select>
             </Form.Group>
           </Form>
         </Modal.Body>
@@ -363,6 +379,19 @@ function Advertisements() {
                 type="file"
                 onChange={handleFileChange} // Assuming handleFileChange is defined
               />
+            </Form.Group>
+            <Form.Group controlId="formAdsType">
+              <Form.Label>Type</Form.Label>
+              <Form.Select
+                name="type"
+                value={newAd.type}
+                onChange={handleInputChange}
+              >
+                <option value="">Select Type</option>
+                <option value="important">Important</option>
+                <option value="most-read">Most Read</option>
+                <option value="general">General</option>
+              </Form.Select>
             </Form.Group>
           </Form>
         </Modal.Body>
