@@ -1,158 +1,85 @@
-.navbar-wrapper {
-  width: 100%;
-  background-color: #ffffff;
-}
-
+/* Navbar Background */
 .custom-navbar {
+  background: linear-gradient(90deg, #0A1931, #1B6CA8);
   padding: 10px 0;
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
-
-.first-row {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
 
+/* Brand Name */
 .brand-name {
-  font-size: 2rem;
-  font-family: "Georgia", serif;
-  color: black;
-  text-transform: uppercase;
-  margin: 0;
-  text-align: center;
-}
-
-.toggle-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-}
-
-.search-bar {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.search-icon {
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-right: 10px;
-  color: #333;
-}
-.search-input {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.navbar-nav {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-top: 15px;
-}
-
-.social-icons a {
+  color: white !important;
   font-size: 1.5rem;
-  color: #555;
-}
-.social-icons a:hover {
-  color: #000;
-}
-
-.btn-subscribe {
-  background: none;
-  color: #007bff;
   font-weight: bold;
-  border: none;
   cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
-.btn-subscribe:hover {
+.brand-name:hover {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Navbar Links */
+.nav-links {
+  gap: 20px; /* Spacing between links */
+  display: flex;
+  align-items: center;
+}
+
+/* Nav Links */
+.navbar-nav .nav-link {
+  color: white !important;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #FFC107 !important;
   text-decoration: underline;
 }
 
-.social-icons {
-  display: flex;
-  gap: 10px;
-}
-
-.social-icons a {
-  font-size: 1rem;
-  color: black;
-  transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #007bff;
-}
-
-.nav-links-container {
-  background-color: #ffffff;
-  border-bottom: 1px solid #ddd;
-}
-
-.nav-links .nav-link {
-  font-size: 0.9rem;
-  color: black;
-  text-transform: uppercase;
-  padding-top: 40px;
-}
-
-.nav-links .nav-link:hover {
-  color: #007bff;
-}
-
-.nav-links .nav-link.active {
-  color: #007bff;
+/* Subscribe Button */
+.btn-subscribe {
+  background: #FFC107;
+  color: #0A1931;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 8px;
   font-weight: bold;
+  cursor: pointer;
+  margin-right: 20px;
+  transition: background 0.3s ease-in-out;
 }
 
-/* Smaller screens (e.g., mobile) */
-@media (max-width: 768px) {
-  .toggle-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 70%; /* Adjust width as needed */
-    height: 100%;
-    background-color: #ffffff;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    z-index: 1050;
-    overflow-y: auto;
-  }
-
-  .search-bar {
-    margin-top: 15px;
-  }
-
-  .navbar-wrapper .nav-links-container {
-    display: none; /* Hide nav links on larger navbar for mobile */
-  }
+.btn-subscribe:hover {
+  background: #FFD54F;
 }
 
-/* Larger screens (e.g., desktop) */
-@media (min-width: 769px) {
-  .toggle-bar {
-    position: static;
-    width: auto;
-    height: auto;
-    box-shadow: none;
-    background-color: transparent;
-  }
+/* Mobile Navigation */
+.mobile-nav {
+  background: #0A1931;
+  padding: 15px 0;
+}
 
-  .navbar-wrapper .nav-links-container {
-    display: block; /* Ensure nav links are visible */
-  }
+.mobile-nav .nav-link {
+  color: white !important;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.mobile-nav .nav-link:hover {
+  color: #FFC107 !important;
+}
+
+/* Navbar Toggle Button */
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
 }

@@ -4,8 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Login from './components/Login'
 import Register from './components/Register'
 import Advertisements from './components/Advertisements'
+import Church from "./components/Church"
 import Navbar from './components/Navbar'
 import News from './components/News'
+import Enquiry from "./components//Enquiry"
+import Visitors from "./components/Visitors"
+import Video from './components/Video'
+
 import './styles/App.css'
 
 function App() {
@@ -29,6 +34,10 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/advertisement" element={<Advertisements />} />
           <Route path="/news" element={<News />} />
+          <Route path="/church" element={<Church />} />
+          <Route path="/enquiry" element={<Enquiry />} />
+          <Route path="/visitors" element={<Visitors />} />
+          <Route path="/video" element={<Video />} />
         </Routes>
       </div>
     </Router>

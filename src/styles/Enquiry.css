@@ -1,0 +1,92 @@
+.enquiry-container{
+    padding: 40px;
+}
+.enquiry-list {
+    width: 90%;
+  max-width: 1200px;
+  margin: 90px;
+  padding: 40px;
+  color: #003366; /* Consistent color theme */
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow:1px 1px 10px 1px lightblue;
+}
+
+h2 {
+    color: #003366;
+    font-weight: bold;
+}
+
+.controls {
+    margin-bottom: 15px;
+}
+
+.search-input {
+    width: 100%;
+    max-width: 300px;
+}
+
+.button-group .btn {
+    min-width: 120px;
+}
+
+.table {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.table th {
+    background-color: #003366;
+    color: white;
+    font-weight: bold;
+}
+
+.table td, .table th {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: middle;
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .enquiry-list{
+        padding: 20px;
+        margin: 50px;
+        width:90%;
+        overflow-x: auto
+    }
+    .controls {
+        flex-direction: column;
+    }
+
+    .search-input, .button-group .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .table th, .table td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .table {
+        font-size: 0.85rem;
+    }
+}
