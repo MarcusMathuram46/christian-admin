@@ -5,6 +5,7 @@ import { Modal, Button, Table, Form } from 'react-bootstrap'
 
 function Advertisements() {
   const [advertisements, setAdvertisements] = useState([])
+  const [loading, setLoading] = useState(true)
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedAds, setSelectedAds] = useState([])
   const [showAddModal, setShowAddModal] = useState(false)
@@ -13,6 +14,7 @@ function Advertisements() {
     title: '',
     description: '',
     image: null,
+    type:'',
   })
   const [adToUpdate, setAdToUpdate] = useState(null)
   useEffect(() => {
